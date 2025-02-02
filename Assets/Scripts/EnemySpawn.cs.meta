@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7b5decd59e44ddf4e9cbfd297373d481
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameManager: {instanceID: 0}
+  - enemy: {fileID: 7099964810160292100, guid: 7a4e2592c851118448fcaca2a4b41ac5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
