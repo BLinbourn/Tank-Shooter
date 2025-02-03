@@ -64,9 +64,12 @@ public class EnemyBehaviour : MonoBehaviour
             if (enemyHealth <= 0f)
             {
                 Destroy(gameObject);
+                ScoreManager.instance.AddScore();
             }
 
             Destroy(collision.gameObject);
+
+
         }
 
         if (collision.gameObject.tag == "Player")
