@@ -59,7 +59,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             StartCoroutine(Damaged());
 
-            enemyHealth -= 20f;
+            enemyHealth -= 40f;
 
             if (enemyHealth <= 0f)
             {
