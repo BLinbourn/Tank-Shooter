@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    private GameManager gameManager;
     private GameObject player;
 
     // Enemy movement
@@ -20,7 +19,6 @@ public class EnemyBehaviour : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.FindGameObjectWithTag("Player");
 
     }
@@ -28,7 +26,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (!gameManager.gameOver && !disableEnemy)
+        if (!GameManager.instance.gameOver && !disableEnemy)
         {
             MoveEnemy();
             RotateEnemy();
@@ -74,7 +72,8 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            gameManager.gameOver = true;
+            GameManager.instance.gameOver = true;
+            GameManager.instance.GameOver();
             collision.gameObject.SetActive(false);
         }
     }
