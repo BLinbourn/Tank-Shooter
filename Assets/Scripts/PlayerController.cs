@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
-
     private Rigidbody2D rb;
 
     private Camera mainCamera;

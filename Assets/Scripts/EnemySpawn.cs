@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
     [SerializeField] private GameObject[] spawnPoints;
     [SerializeField] private GameObject enemy;
 
     private float spawnTimer = 2f;
-    private float spawnRateIncrease = 5f;
+    private float spawnRateIncrease = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,7 @@ public class EnemySpawn : MonoBehaviour
         Instantiate(enemy, spawnPoints[nextSpawnLocation].transform.position, Quaternion.identity);
         yield return new WaitForSeconds(spawnTimer);
 
-        if (!gameManager.gameOver)
+        if (!GameManager.instance.gameOver)
         {
             StartCoroutine(SpawnNextEnemy());
         }
