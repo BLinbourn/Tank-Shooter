@@ -24,6 +24,6 @@ public class GameOverScreen : MonoBehaviour
 
     public void ExitButton()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }
